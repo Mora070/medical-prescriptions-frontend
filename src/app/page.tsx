@@ -7,7 +7,7 @@ export default function HomePage() {
     <main className="min-h-screen bg-white overflow-hidden">
 
       {/* NAV */}
-      <nav className="flex items-center justify-between px-8 py-5 border-b border-slate-100">
+      <nav className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between px-4 py-4 sm:px-6 lg:px-8 border-b border-slate-100">
         <div className="flex items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-600">
             <FileText className="h-4 w-4 text-white" />
@@ -22,7 +22,7 @@ export default function HomePage() {
       </nav>
 
       {/* HERO */}
-      <section className="relative mx-auto max-w-6xl px-8 pt-20 pb-16">
+      <section className="relative mx-auto max-w-6xl px-4 pt-14 pb-12 sm:px-6 lg:px-8 lg:pt-20 lg:pb-16">
 
         {/* fondo decorativo */}
         <div className="pointer-events-none absolute -top-10 right-0 h-[520px] w-[520px] rounded-full bg-violet-50 blur-3xl opacity-60" />
@@ -34,17 +34,17 @@ export default function HomePage() {
             Plataforma médica segura
           </span>
 
-          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900">
+          <h1 className="text-3xl sm:text-4xl sm:text-5xl font-bold leading-[1.1] tracking-tight text-slate-900">
             Prescripciones médicas,{' '}
             <span className="text-violet-600">sin fricciones.</span>
           </h1>
 
-          <p className="mt-6 text-lg leading-relaxed text-slate-500 max-w-xl">
+          <p className="mt-6 text-base sm:text-lg leading-relaxed text-slate-500 max-w-xl">
             Gestiona recetas, verifica identidades y genera PDFs con firma digital.
             Diseñado para médicos, pacientes y administradores.
           </p>
 
-          <div className="mt-10 flex items-center gap-4">
+          <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <Link href="/login">
               <Button size="lg" className="bg-violet-600 hover:bg-violet-700 text-white px-8 h-12">
                 Comenzar ahora
@@ -71,7 +71,7 @@ export default function HomePage() {
 
           {/* mini tabla demo */}
           <div className="p-6">
-            <div className="mb-4 flex items-center justify-between">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <div className="text-base font-semibold text-slate-900">Prescripciones</div>
                 <div className="text-xs text-slate-400">Gestión de recetas médicas</div>
@@ -81,8 +81,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-slate-100 overflow-hidden text-sm">
-              <div className="grid grid-cols-4 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-500">
+            <div className="overflow-x-auto rounded-xl border border-slate-100 text-sm">
+              <div className="grid min-w-[600px] grid-cols-4 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-500">
                 <span>Código</span>
                 <span>Estado</span>
                 <span>Fecha</span>
@@ -93,7 +93,7 @@ export default function HomePage() {
                 { code: 'RX-DEMO-002', status: 'Consumida', color: 'green', date: '13/05/2026' },
                 { code: 'RX-DEMO-003', status: 'Consumida', color: 'green', date: '12/05/2026' },
               ].map((row, i) => (
-                <div key={i} className="grid grid-cols-4 items-center px-4 py-3 border-t border-slate-100">
+                <div key={i} className="grid min-w-[600px] grid-cols-4 items-center px-4 py-3 border-t border-slate-100">
                   <span className="font-mono text-xs text-slate-700">{row.code}</span>
                   <span>
                     <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${
@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* FEATURES */}
-      <section className="mx-auto max-w-6xl px-8 py-20">
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-slate-900">Todo lo que necesitas</h2>
           <p className="mt-3 text-slate-500">Una plataforma, tres roles, cero complicaciones.</p>
@@ -155,7 +155,7 @@ export default function HomePage() {
 
       {/* ROLES */}
       <section className="bg-slate-50 border-y border-slate-100">
-        <div className="mx-auto max-w-6xl px-8 py-20">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-slate-900">Tres roles, una plataforma</h2>
           </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
 
       {/* CTA FINAL */}
       <section className="mx-auto max-w-6xl px-8 py-24 text-center">
-        <h2 className="text-4xl font-bold text-slate-900">Listo para empezar?</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Listo para empezar?</h2>
         <p className="mt-4 text-slate-500 max-w-md mx-auto">
           Accede con tus credenciales y gestiona prescripciones desde cualquier dispositivo.
         </p>
